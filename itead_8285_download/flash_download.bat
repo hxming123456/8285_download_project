@@ -1,0 +1,1 @@
+D:\itead_8285_download\flashtool\flash_downloadUI.exe %1 %2
