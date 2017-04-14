@@ -1,0 +1,24 @@
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+COM5
+COM_panel_1 open succeed
+device_sync Connecting...
+chip sync ok!
+filename:%s D:\itead_8285_download\flashtool\bin_file\blank.bin
+offset : %s 516096
+filename:%s D:\itead_8285_download\flashtool\bin_file\boot_v1.6.bin_rep
+offset : %s 0
+filename:%s D:\itead_8285_download\flashtool\bin_file\esp_init_data_default.bin_rep
+offset : %s 1032192
+filename:%s D:\itead_8285_download\flashtool\bin_file\user1.1024.new.2.bin
+offset : %s 4096
+filename:%s data csv
+offset : %s 491520
+filename:%s Sign a sector
+offset : %s 499712
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+4096
+Erasing flash...
+head: 1 ;total: 1
+erase size : 4096

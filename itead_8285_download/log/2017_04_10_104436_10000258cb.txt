@@ -1,0 +1,8 @@
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+COM5
+COM_panel_1 open succeed
+device_sync Connecting...
+chip sync error.
+sync device no return data
+download flash failed
+exit 3

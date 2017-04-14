@@ -1,0 +1,1296 @@
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+COM5
+COM_panel_1 open succeed
+device_sync Connecting...
+chip sync ok!
+filename:%s D:\itead_8285_download\flashtool\bin_file\blank.bin
+offset : %s 516096
+filename:%s D:\itead_8285_download\flashtool\bin_file\boot_v1.6.bin_rep
+offset : %s 0
+filename:%s D:\itead_8285_download\flashtool\bin_file\esp_init_data_default.bin_rep
+offset : %s 1032192
+filename:%s D:\itead_8285_download\flashtool\bin_file\user1.1024.new.2.bin
+offset : %s 4096
+filename:%s data csv
+offset : %s 491520
+filename:%s Sign a sector
+offset : %s 499712
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+4096
+Erasing flash...
+head: 1 ;total: 1
+erase size : 4096
+erase flash succeed
+come to Writing at 0x0007e000... (0 %)
+
+Leaving...
+come to Writing at 0x0007e400... (0 %)
+
+Leaving...
+come to Writing at 0x0007e800... (0 %)
+
+Leaving...
+come to Writing at 0x0007ec00... (0 %)
+
+Leaving...
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+3856
+Erasing flash...
+head: 1 ;total: 1
+erase size : 4096
+erase flash succeed
+come to Writing at 0x00000000... (1 %)
+
+Leaving...
+come to Writing at 0x00000400... (1 %)
+
+Leaving...
+come to Writing at 0x00000800... (1 %)
+
+Leaving...
+come to Writing at 0x00000c00... (1 %)
+
+Leaving...
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+128
+Erasing flash...
+head: 1 ;total: 1
+erase size : 4096
+erase flash succeed
+come to Writing at 0x000fc000... (2 %)
+
+Leaving...
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+398420
+Erasing flash...
+head:  15 ;total: 98
+erase size :  339968
+erase flash succeed
+come to Writing at 0x00001000... (2 %)
+
+Leaving...
+come to Writing at 0x00001400... (2 %)
+
+Leaving...
+come to Writing at 0x00001800... (2 %)
+
+Leaving...
+come to Writing at 0x00001c00... (3 %)
+
+Leaving...
+come to Writing at 0x00002000... (3 %)
+
+Leaving...
+come to Writing at 0x00002400... (3 %)
+
+Leaving...
+come to Writing at 0x00002800... (3 %)
+
+Leaving...
+come to Writing at 0x00002c00... (4 %)
+
+Leaving...
+come to Writing at 0x00003000... (4 %)
+
+Leaving...
+come to Writing at 0x00003400... (4 %)
+
+Leaving...
+come to Writing at 0x00003800... (4 %)
+
+Leaving...
+come to Writing at 0x00003c00... (5 %)
+
+Leaving...
+come to Writing at 0x00004000... (5 %)
+
+Leaving...
+come to Writing at 0x00004400... (5 %)
+
+Leaving...
+come to Writing at 0x00004800... (5 %)
+
+Leaving...
+come to Writing at 0x00004c00... (6 %)
+
+Leaving...
+come to Writing at 0x00005000... (6 %)
+
+Leaving...
+come to Writing at 0x00005400... (6 %)
+
+Leaving...
+come to Writing at 0x00005800... (6 %)
+
+Leaving...
+come to Writing at 0x00005c00... (7 %)
+
+Leaving...
+come to Writing at 0x00006000... (7 %)
+
+Leaving...
+come to Writing at 0x00006400... (7 %)
+
+Leaving...
+come to Writing at 0x00006800... (7 %)
+
+Leaving...
+come to Writing at 0x00006c00... (8 %)
+
+Leaving...
+come to Writing at 0x00007000... (8 %)
+
+Leaving...
+come to Writing at 0x00007400... (8 %)
+
+Leaving...
+come to Writing at 0x00007800... (8 %)
+
+Leaving...
+come to Writing at 0x00007c00... (9 %)
+
+Leaving...
+come to Writing at 0x00008000... (9 %)
+
+Leaving...
+come to Writing at 0x00008400... (9 %)
+
+Leaving...
+come to Writing at 0x00008800... (9 %)
+
+Leaving...
+come to Writing at 0x00008c00... (10 %)
+
+Leaving...
+come to Writing at 0x00009000... (10 %)
+
+Leaving...
+come to Writing at 0x00009400... (10 %)
+
+Leaving...
+come to Writing at 0x00009800... (10 %)
+
+Leaving...
+come to Writing at 0x00009c00... (11 %)
+
+Leaving...
+come to Writing at 0x0000a000... (11 %)
+
+Leaving...
+come to Writing at 0x0000a400... (11 %)
+
+Leaving...
+come to Writing at 0x0000a800... (11 %)
+
+Leaving...
+come to Writing at 0x0000ac00... (12 %)
+
+Leaving...
+come to Writing at 0x0000b000... (12 %)
+
+Leaving...
+come to Writing at 0x0000b400... (12 %)
+
+Leaving...
+come to Writing at 0x0000b800... (12 %)
+
+Leaving...
+come to Writing at 0x0000bc00... (12 %)
+
+Leaving...
+come to Writing at 0x0000c000... (13 %)
+
+Leaving...
+come to Writing at 0x0000c400... (13 %)
+
+Leaving...
+come to Writing at 0x0000c800... (13 %)
+
+Leaving...
+come to Writing at 0x0000cc00... (13 %)
+
+Leaving...
+come to Writing at 0x0000d000... (14 %)
+
+Leaving...
+come to Writing at 0x0000d400... (14 %)
+
+Leaving...
+come to Writing at 0x0000d800... (14 %)
+
+Leaving...
+come to Writing at 0x0000dc00... (14 %)
+
+Leaving...
+come to Writing at 0x0000e000... (15 %)
+
+Leaving...
+come to Writing at 0x0000e400... (15 %)
+
+Leaving...
+come to Writing at 0x0000e800... (15 %)
+
+Leaving...
+come to Writing at 0x0000ec00... (15 %)
+
+Leaving...
+come to Writing at 0x0000f000... (16 %)
+
+Leaving...
+come to Writing at 0x0000f400... (16 %)
+
+Leaving...
+come to Writing at 0x0000f800... (16 %)
+
+Leaving...
+come to Writing at 0x0000fc00... (16 %)
+
+Leaving...
+come to Writing at 0x00010000... (17 %)
+
+Leaving...
+come to Writing at 0x00010400... (17 %)
+
+Leaving...
+come to Writing at 0x00010800... (17 %)
+
+Leaving...
+come to Writing at 0x00010c00... (17 %)
+
+Leaving...
+come to Writing at 0x00011000... (18 %)
+
+Leaving...
+come to Writing at 0x00011400... (18 %)
+
+Leaving...
+come to Writing at 0x00011800... (18 %)
+
+Leaving...
+come to Writing at 0x00011c00... (18 %)
+
+Leaving...
+come to Writing at 0x00012000... (19 %)
+
+Leaving...
+come to Writing at 0x00012400... (19 %)
+
+Leaving...
+come to Writing at 0x00012800... (19 %)
+
+Leaving...
+come to Writing at 0x00012c00... (19 %)
+
+Leaving...
+come to Writing at 0x00013000... (20 %)
+
+Leaving...
+come to Writing at 0x00013400... (20 %)
+
+Leaving...
+come to Writing at 0x00013800... (20 %)
+
+Leaving...
+come to Writing at 0x00013c00... (20 %)
+
+Leaving...
+come to Writing at 0x00014000... (21 %)
+
+Leaving...
+come to Writing at 0x00014400... (21 %)
+
+Leaving...
+come to Writing at 0x00014800... (21 %)
+
+Leaving...
+come to Writing at 0x00014c00... (21 %)
+
+Leaving...
+come to Writing at 0x00015000... (22 %)
+
+Leaving...
+come to Writing at 0x00015400... (22 %)
+
+Leaving...
+come to Writing at 0x00015800... (22 %)
+
+Leaving...
+come to Writing at 0x00015c00... (22 %)
+
+Leaving...
+come to Writing at 0x00016000... (23 %)
+
+Leaving...
+come to Writing at 0x00016400... (23 %)
+
+Leaving...
+come to Writing at 0x00016800... (23 %)
+
+Leaving...
+come to Writing at 0x00016c00... (23 %)
+
+Leaving...
+come to Writing at 0x00017000... (24 %)
+
+Leaving...
+come to Writing at 0x00017400... (24 %)
+
+Leaving...
+come to Writing at 0x00017800... (24 %)
+
+Leaving...
+come to Writing at 0x00017c00... (24 %)
+
+Leaving...
+come to Writing at 0x00018000... (25 %)
+
+Leaving...
+come to Writing at 0x00018400... (25 %)
+
+Leaving...
+come to Writing at 0x00018800... (25 %)
+
+Leaving...
+come to Writing at 0x00018c00... (25 %)
+
+Leaving...
+come to Writing at 0x00019000... (25 %)
+
+Leaving...
+come to Writing at 0x00019400... (26 %)
+
+Leaving...
+come to Writing at 0x00019800... (26 %)
+
+Leaving...
+come to Writing at 0x00019c00... (26 %)
+
+Leaving...
+come to Writing at 0x0001a000... (26 %)
+
+Leaving...
+come to Writing at 0x0001a400... (27 %)
+
+Leaving...
+come to Writing at 0x0001a800... (27 %)
+
+Leaving...
+come to Writing at 0x0001ac00... (27 %)
+
+Leaving...
+come to Writing at 0x0001b000... (27 %)
+
+Leaving...
+come to Writing at 0x0001b400... (28 %)
+
+Leaving...
+come to Writing at 0x0001b800... (28 %)
+
+Leaving...
+come to Writing at 0x0001bc00... (28 %)
+
+Leaving...
+come to Writing at 0x0001c000... (28 %)
+
+Leaving...
+come to Writing at 0x0001c400... (29 %)
+
+Leaving...
+come to Writing at 0x0001c800... (29 %)
+
+Leaving...
+come to Writing at 0x0001cc00... (29 %)
+
+Leaving...
+come to Writing at 0x0001d000... (29 %)
+
+Leaving...
+come to Writing at 0x0001d400... (30 %)
+
+Leaving...
+come to Writing at 0x0001d800... (30 %)
+
+Leaving...
+come to Writing at 0x0001dc00... (30 %)
+
+Leaving...
+come to Writing at 0x0001e000... (30 %)
+
+Leaving...
+come to Writing at 0x0001e400... (31 %)
+
+Leaving...
+come to Writing at 0x0001e800... (31 %)
+
+Leaving...
+come to Writing at 0x0001ec00... (31 %)
+
+Leaving...
+come to Writing at 0x0001f000... (31 %)
+
+Leaving...
+come to Writing at 0x0001f400... (32 %)
+
+Leaving...
+come to Writing at 0x0001f800... (32 %)
+
+Leaving...
+come to Writing at 0x0001fc00... (32 %)
+
+Leaving...
+come to Writing at 0x00020000... (32 %)
+
+Leaving...
+come to Writing at 0x00020400... (33 %)
+
+Leaving...
+come to Writing at 0x00020800... (33 %)
+
+Leaving...
+come to Writing at 0x00020c00... (33 %)
+
+Leaving...
+come to Writing at 0x00021000... (33 %)
+
+Leaving...
+come to Writing at 0x00021400... (34 %)
+
+Leaving...
+come to Writing at 0x00021800... (34 %)
+
+Leaving...
+come to Writing at 0x00021c00... (34 %)
+
+Leaving...
+come to Writing at 0x00022000... (34 %)
+
+Leaving...
+come to Writing at 0x00022400... (35 %)
+
+Leaving...
+come to Writing at 0x00022800... (35 %)
+
+Leaving...
+come to Writing at 0x00022c00... (35 %)
+
+Leaving...
+come to Writing at 0x00023000... (35 %)
+
+Leaving...
+come to Writing at 0x00023400... (36 %)
+
+Leaving...
+come to Writing at 0x00023800... (36 %)
+
+Leaving...
+come to Writing at 0x00023c00... (36 %)
+
+Leaving...
+come to Writing at 0x00024000... (36 %)
+
+Leaving...
+come to Writing at 0x00024400... (37 %)
+
+Leaving...
+come to Writing at 0x00024800... (37 %)
+
+Leaving...
+come to Writing at 0x00024c00... (37 %)
+
+Leaving...
+come to Writing at 0x00025000... (37 %)
+
+Leaving...
+come to Writing at 0x00025400... (37 %)
+
+Leaving...
+come to Writing at 0x00025800... (38 %)
+
+Leaving...
+come to Writing at 0x00025c00... (38 %)
+
+Leaving...
+come to Writing at 0x00026000... (38 %)
+
+Leaving...
+come to Writing at 0x00026400... (38 %)
+
+Leaving...
+come to Writing at 0x00026800... (39 %)
+
+Leaving...
+come to Writing at 0x00026c00... (39 %)
+
+Leaving...
+come to Writing at 0x00027000... (39 %)
+
+Leaving...
+come to Writing at 0x00027400... (39 %)
+
+Leaving...
+come to Writing at 0x00027800... (40 %)
+
+Leaving...
+come to Writing at 0x00027c00... (40 %)
+
+Leaving...
+come to Writing at 0x00028000... (40 %)
+
+Leaving...
+come to Writing at 0x00028400... (40 %)
+
+Leaving...
+come to Writing at 0x00028800... (41 %)
+
+Leaving...
+come to Writing at 0x00028c00... (41 %)
+
+Leaving...
+come to Writing at 0x00029000... (41 %)
+
+Leaving...
+come to Writing at 0x00029400... (41 %)
+
+Leaving...
+come to Writing at 0x00029800... (42 %)
+
+Leaving...
+come to Writing at 0x00029c00... (42 %)
+
+Leaving...
+come to Writing at 0x0002a000... (42 %)
+
+Leaving...
+come to Writing at 0x0002a400... (42 %)
+
+Leaving...
+come to Writing at 0x0002a800... (43 %)
+
+Leaving...
+come to Writing at 0x0002ac00... (43 %)
+
+Leaving...
+come to Writing at 0x0002b000... (43 %)
+
+Leaving...
+come to Writing at 0x0002b400... (43 %)
+
+Leaving...
+come to Writing at 0x0002b800... (44 %)
+
+Leaving...
+come to Writing at 0x0002bc00... (44 %)
+
+Leaving...
+come to Writing at 0x0002c000... (44 %)
+
+Leaving...
+come to Writing at 0x0002c400... (44 %)
+
+Leaving...
+come to Writing at 0x0002c800... (45 %)
+
+Leaving...
+come to Writing at 0x0002cc00... (45 %)
+
+Leaving...
+come to Writing at 0x0002d000... (45 %)
+
+Leaving...
+come to Writing at 0x0002d400... (45 %)
+
+Leaving...
+come to Writing at 0x0002d800... (46 %)
+
+Leaving...
+come to Writing at 0x0002dc00... (46 %)
+
+Leaving...
+come to Writing at 0x0002e000... (46 %)
+
+Leaving...
+come to Writing at 0x0002e400... (46 %)
+
+Leaving...
+come to Writing at 0x0002e800... (47 %)
+
+Leaving...
+come to Writing at 0x0002ec00... (47 %)
+
+Leaving...
+come to Writing at 0x0002f000... (47 %)
+
+Leaving...
+come to Writing at 0x0002f400... (47 %)
+
+Leaving...
+come to Writing at 0x0002f800... (48 %)
+
+Leaving...
+come to Writing at 0x0002fc00... (48 %)
+
+Leaving...
+come to Writing at 0x00030000... (48 %)
+
+Leaving...
+come to Writing at 0x00030400... (48 %)
+
+Leaving...
+come to Writing at 0x00030800... (49 %)
+
+Leaving...
+come to Writing at 0x00030c00... (49 %)
+
+Leaving...
+come to Writing at 0x00031000... (49 %)
+
+Leaving...
+come to Writing at 0x00031400... (49 %)
+
+Leaving...
+come to Writing at 0x00031800... (50 %)
+
+Leaving...
+come to Writing at 0x00031c00... (50 %)
+
+Leaving...
+come to Writing at 0x00032000... (50 %)
+
+Leaving...
+come to Writing at 0x00032400... (50 %)
+
+Leaving...
+come to Writing at 0x00032800... (50 %)
+
+Leaving...
+come to Writing at 0x00032c00... (51 %)
+
+Leaving...
+come to Writing at 0x00033000... (51 %)
+
+Leaving...
+come to Writing at 0x00033400... (51 %)
+
+Leaving...
+come to Writing at 0x00033800... (51 %)
+
+Leaving...
+come to Writing at 0x00033c00... (52 %)
+
+Leaving...
+come to Writing at 0x00034000... (52 %)
+
+Leaving...
+come to Writing at 0x00034400... (52 %)
+
+Leaving...
+come to Writing at 0x00034800... (52 %)
+
+Leaving...
+come to Writing at 0x00034c00... (53 %)
+
+Leaving...
+come to Writing at 0x00035000... (53 %)
+
+Leaving...
+come to Writing at 0x00035400... (53 %)
+
+Leaving...
+come to Writing at 0x00035800... (53 %)
+
+Leaving...
+come to Writing at 0x00035c00... (54 %)
+
+Leaving...
+come to Writing at 0x00036000... (54 %)
+
+Leaving...
+come to Writing at 0x00036400... (54 %)
+
+Leaving...
+come to Writing at 0x00036800... (54 %)
+
+Leaving...
+come to Writing at 0x00036c00... (55 %)
+
+Leaving...
+come to Writing at 0x00037000... (55 %)
+
+Leaving...
+come to Writing at 0x00037400... (55 %)
+
+Leaving...
+come to Writing at 0x00037800... (55 %)
+
+Leaving...
+come to Writing at 0x00037c00... (56 %)
+
+Leaving...
+come to Writing at 0x00038000... (56 %)
+
+Leaving...
+come to Writing at 0x00038400... (56 %)
+
+Leaving...
+come to Writing at 0x00038800... (56 %)
+
+Leaving...
+come to Writing at 0x00038c00... (57 %)
+
+Leaving...
+come to Writing at 0x00039000... (57 %)
+
+Leaving...
+come to Writing at 0x00039400... (57 %)
+
+Leaving...
+come to Writing at 0x00039800... (57 %)
+
+Leaving...
+come to Writing at 0x00039c00... (58 %)
+
+Leaving...
+come to Writing at 0x0003a000... (58 %)
+
+Leaving...
+come to Writing at 0x0003a400... (58 %)
+
+Leaving...
+come to Writing at 0x0003a800... (58 %)
+
+Leaving...
+come to Writing at 0x0003ac00... (59 %)
+
+Leaving...
+come to Writing at 0x0003b000... (59 %)
+
+Leaving...
+come to Writing at 0x0003b400... (59 %)
+
+Leaving...
+come to Writing at 0x0003b800... (59 %)
+
+Leaving...
+come to Writing at 0x0003bc00... (60 %)
+
+Leaving...
+come to Writing at 0x0003c000... (60 %)
+
+Leaving...
+come to Writing at 0x0003c400... (60 %)
+
+Leaving...
+come to Writing at 0x0003c800... (60 %)
+
+Leaving...
+come to Writing at 0x0003cc00... (61 %)
+
+Leaving...
+come to Writing at 0x0003d000... (61 %)
+
+Leaving...
+come to Writing at 0x0003d400... (61 %)
+
+Leaving...
+come to Writing at 0x0003d800... (61 %)
+
+Leaving...
+come to Writing at 0x0003dc00... (62 %)
+
+Leaving...
+come to Writing at 0x0003e000... (62 %)
+
+Leaving...
+come to Writing at 0x0003e400... (62 %)
+
+Leaving...
+come to Writing at 0x0003e800... (62 %)
+
+Leaving...
+come to Writing at 0x0003ec00... (62 %)
+
+Leaving...
+come to Writing at 0x0003f000... (63 %)
+
+Leaving...
+come to Writing at 0x0003f400... (63 %)
+
+Leaving...
+come to Writing at 0x0003f800... (63 %)
+
+Leaving...
+come to Writing at 0x0003fc00... (63 %)
+
+Leaving...
+come to Writing at 0x00040000... (64 %)
+
+Leaving...
+come to Writing at 0x00040400... (64 %)
+
+Leaving...
+come to Writing at 0x00040800... (64 %)
+
+Leaving...
+come to Writing at 0x00040c00... (64 %)
+
+Leaving...
+come to Writing at 0x00041000... (65 %)
+
+Leaving...
+come to Writing at 0x00041400... (65 %)
+
+Leaving...
+come to Writing at 0x00041800... (65 %)
+
+Leaving...
+come to Writing at 0x00041c00... (65 %)
+
+Leaving...
+come to Writing at 0x00042000... (66 %)
+
+Leaving...
+come to Writing at 0x00042400... (66 %)
+
+Leaving...
+come to Writing at 0x00042800... (66 %)
+
+Leaving...
+come to Writing at 0x00042c00... (66 %)
+
+Leaving...
+come to Writing at 0x00043000... (67 %)
+
+Leaving...
+come to Writing at 0x00043400... (67 %)
+
+Leaving...
+come to Writing at 0x00043800... (67 %)
+
+Leaving...
+come to Writing at 0x00043c00... (67 %)
+
+Leaving...
+come to Writing at 0x00044000... (68 %)
+
+Leaving...
+come to Writing at 0x00044400... (68 %)
+
+Leaving...
+come to Writing at 0x00044800... (68 %)
+
+Leaving...
+come to Writing at 0x00044c00... (68 %)
+
+Leaving...
+come to Writing at 0x00045000... (69 %)
+
+Leaving...
+come to Writing at 0x00045400... (69 %)
+
+Leaving...
+come to Writing at 0x00045800... (69 %)
+
+Leaving...
+come to Writing at 0x00045c00... (69 %)
+
+Leaving...
+come to Writing at 0x00046000... (70 %)
+
+Leaving...
+come to Writing at 0x00046400... (70 %)
+
+Leaving...
+come to Writing at 0x00046800... (70 %)
+
+Leaving...
+come to Writing at 0x00046c00... (70 %)
+
+Leaving...
+come to Writing at 0x00047000... (71 %)
+
+Leaving...
+come to Writing at 0x00047400... (71 %)
+
+Leaving...
+come to Writing at 0x00047800... (71 %)
+
+Leaving...
+come to Writing at 0x00047c00... (71 %)
+
+Leaving...
+come to Writing at 0x00048000... (72 %)
+
+Leaving...
+come to Writing at 0x00048400... (72 %)
+
+Leaving...
+come to Writing at 0x00048800... (72 %)
+
+Leaving...
+come to Writing at 0x00048c00... (72 %)
+
+Leaving...
+come to Writing at 0x00049000... (73 %)
+
+Leaving...
+come to Writing at 0x00049400... (73 %)
+
+Leaving...
+come to Writing at 0x00049800... (73 %)
+
+Leaving...
+come to Writing at 0x00049c00... (73 %)
+
+Leaving...
+come to Writing at 0x0004a000... (74 %)
+
+Leaving...
+come to Writing at 0x0004a400... (74 %)
+
+Leaving...
+come to Writing at 0x0004a800... (74 %)
+
+Leaving...
+come to Writing at 0x0004ac00... (74 %)
+
+Leaving...
+come to Writing at 0x0004b000... (75 %)
+
+Leaving...
+come to Writing at 0x0004b400... (75 %)
+
+Leaving...
+come to Writing at 0x0004b800... (75 %)
+
+Leaving...
+come to Writing at 0x0004bc00... (75 %)
+
+Leaving...
+come to Writing at 0x0004c000... (75 %)
+
+Leaving...
+come to Writing at 0x0004c400... (76 %)
+
+Leaving...
+come to Writing at 0x0004c800... (76 %)
+
+Leaving...
+come to Writing at 0x0004cc00... (76 %)
+
+Leaving...
+come to Writing at 0x0004d000... (76 %)
+
+Leaving...
+come to Writing at 0x0004d400... (77 %)
+
+Leaving...
+come to Writing at 0x0004d800... (77 %)
+
+Leaving...
+come to Writing at 0x0004dc00... (77 %)
+
+Leaving...
+come to Writing at 0x0004e000... (77 %)
+
+Leaving...
+come to Writing at 0x0004e400... (78 %)
+
+Leaving...
+come to Writing at 0x0004e800... (78 %)
+
+Leaving...
+come to Writing at 0x0004ec00... (78 %)
+
+Leaving...
+come to Writing at 0x0004f000... (78 %)
+
+Leaving...
+come to Writing at 0x0004f400... (79 %)
+
+Leaving...
+come to Writing at 0x0004f800... (79 %)
+
+Leaving...
+come to Writing at 0x0004fc00... (79 %)
+
+Leaving...
+come to Writing at 0x00050000... (79 %)
+
+Leaving...
+come to Writing at 0x00050400... (80 %)
+
+Leaving...
+come to Writing at 0x00050800... (80 %)
+
+Leaving...
+come to Writing at 0x00050c00... (80 %)
+
+Leaving...
+come to Writing at 0x00051000... (80 %)
+
+Leaving...
+come to Writing at 0x00051400... (81 %)
+
+Leaving...
+come to Writing at 0x00051800... (81 %)
+
+Leaving...
+come to Writing at 0x00051c00... (81 %)
+
+Leaving...
+come to Writing at 0x00052000... (81 %)
+
+Leaving...
+come to Writing at 0x00052400... (82 %)
+
+Leaving...
+come to Writing at 0x00052800... (82 %)
+
+Leaving...
+come to Writing at 0x00052c00... (82 %)
+
+Leaving...
+come to Writing at 0x00053000... (82 %)
+
+Leaving...
+come to Writing at 0x00053400... (83 %)
+
+Leaving...
+come to Writing at 0x00053800... (83 %)
+
+Leaving...
+come to Writing at 0x00053c00... (83 %)
+
+Leaving...
+come to Writing at 0x00054000... (83 %)
+
+Leaving...
+come to Writing at 0x00054400... (84 %)
+
+Leaving...
+come to Writing at 0x00054800... (84 %)
+
+Leaving...
+come to Writing at 0x00054c00... (84 %)
+
+Leaving...
+come to Writing at 0x00055000... (84 %)
+
+Leaving...
+come to Writing at 0x00055400... (85 %)
+
+Leaving...
+come to Writing at 0x00055800... (85 %)
+
+Leaving...
+come to Writing at 0x00055c00... (85 %)
+
+Leaving...
+come to Writing at 0x00056000... (85 %)
+
+Leaving...
+come to Writing at 0x00056400... (86 %)
+
+Leaving...
+come to Writing at 0x00056800... (86 %)
+
+Leaving...
+come to Writing at 0x00056c00... (86 %)
+
+Leaving...
+come to Writing at 0x00057000... (86 %)
+
+Leaving...
+come to Writing at 0x00057400... (87 %)
+
+Leaving...
+come to Writing at 0x00057800... (87 %)
+
+Leaving...
+come to Writing at 0x00057c00... (87 %)
+
+Leaving...
+come to Writing at 0x00058000... (87 %)
+
+Leaving...
+come to Writing at 0x00058400... (87 %)
+
+Leaving...
+come to Writing at 0x00058800... (88 %)
+
+Leaving...
+come to Writing at 0x00058c00... (88 %)
+
+Leaving...
+come to Writing at 0x00059000... (88 %)
+
+Leaving...
+come to Writing at 0x00059400... (88 %)
+
+Leaving...
+come to Writing at 0x00059800... (89 %)
+
+Leaving...
+come to Writing at 0x00059c00... (89 %)
+
+Leaving...
+come to Writing at 0x0005a000... (89 %)
+
+Leaving...
+come to Writing at 0x0005a400... (89 %)
+
+Leaving...
+come to Writing at 0x0005a800... (90 %)
+
+Leaving...
+come to Writing at 0x0005ac00... (90 %)
+
+Leaving...
+come to Writing at 0x0005b000... (90 %)
+
+Leaving...
+come to Writing at 0x0005b400... (90 %)
+
+Leaving...
+come to Writing at 0x0005b800... (91 %)
+
+Leaving...
+come to Writing at 0x0005bc00... (91 %)
+
+Leaving...
+come to Writing at 0x0005c000... (91 %)
+
+Leaving...
+come to Writing at 0x0005c400... (91 %)
+
+Leaving...
+come to Writing at 0x0005c800... (92 %)
+
+Leaving...
+come to Writing at 0x0005cc00... (92 %)
+
+Leaving...
+come to Writing at 0x0005d000... (92 %)
+
+Leaving...
+come to Writing at 0x0005d400... (92 %)
+
+Leaving...
+come to Writing at 0x0005d800... (93 %)
+
+Leaving...
+come to Writing at 0x0005dc00... (93 %)
+
+Leaving...
+come to Writing at 0x0005e000... (93 %)
+
+Leaving...
+come to Writing at 0x0005e400... (93 %)
+
+Leaving...
+come to Writing at 0x0005e800... (94 %)
+
+Leaving...
+come to Writing at 0x0005ec00... (94 %)
+
+Leaving...
+come to Writing at 0x0005f000... (94 %)
+
+Leaving...
+come to Writing at 0x0005f400... (94 %)
+
+Leaving...
+come to Writing at 0x0005f800... (95 %)
+
+Leaving...
+come to Writing at 0x0005fc00... (95 %)
+
+Leaving...
+come to Writing at 0x00060000... (95 %)
+
+Leaving...
+come to Writing at 0x00060400... (95 %)
+
+Leaving...
+come to Writing at 0x00060800... (96 %)
+
+Leaving...
+come to Writing at 0x00060c00... (96 %)
+
+Leaving...
+come to Writing at 0x00061000... (96 %)
+
+Leaving...
+come to Writing at 0x00061400... (96 %)
+
+Leaving...
+come to Writing at 0x00061800... (97 %)
+
+Leaving...
+come to Writing at 0x00061c00... (97 %)
+
+Leaving...
+come to Writing at 0x00062000... (97 %)
+
+Leaving...
+come to Writing at 0x00062400... (97 %)
+
+Leaving...
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+Y 10000258ca 5eaefe1f-40e2-4f27-a6d0-d0f16ae8bdab d0:27:00:04:ae:e4 d0:27:00:04:ae:e5 PSF-A01-GL
+96
+PSF-A01-GL
+10000258ca
+5eaefe1f-40e2-4f27-a6d0-d0f16ae8bdab
+Ð' ®ä
+Ð' ®å
+data_len:
+4095
+head: 1 ;total: 1
+erase size : 4096
+erase flash succeed
+come to Writing at 0x00078000... (98 %)
+
+Leaving...
+come to Writing at 0x00078400... (98 %)
+
+Leaving...
+come to Writing at 0x00078800... (98 %)
+
+Leaving...
+come to Writing at 0x00078c00... (98 %)
+
+Leaving...
+dl_list:
+[[u'D:\\itead_8285_download\\flashtool\\bin_file\\blank.bin', 516096], [u'D:\\itead_8285_download\\flashtool\\bin_file\\boot_v1.6.bin_rep', 0], [u'D:\\itead_8285_download\\flashtool\\bin_file\\esp_init_data_default.bin_rep', 1032192], [u'D:\\itead_8285_download\\flashtool\\bin_file\\user1.1024.new.2.bin', 4096], [u'data csv', 491520], [u'Sign a sector', 499712]]
+data_len:
+4095
+head: 1 ;total: 1
+erase size : 4096
+erase flash succeed
+come to Writing at 0x0007a000... (99 %)
+
+Leaving...
+come to Writing at 0x0007a400... (99 %)
+
+Leaving...
+come to Writing at 0x0007a800... (99 %)
+
+Leaving...
+come to Writing at 0x0007ac00... (99 %)
+
+Leaving...
+Writeing all over 100%
+COM_panel_1 close
+sync device no return data
+download flash failed
+exit 2
