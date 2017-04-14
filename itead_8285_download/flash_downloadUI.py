@@ -54,7 +54,9 @@ class FlashUI(wx.Frame):
         self.process_num = 1
         self.load_data_flag = 0
 
-        self.f_note = open('D:\\itead_8285_download\\log\\'+datetime.now().strftime('%Y_%m_%d_%H%M%S_')+sys.argv[2][2:12]+'.txt','a')
+        #self.f_note = open('D:\\itead_8285_download\\log\\'+datetime.now().strftime('%Y_%m_%d_%H%M%S_')+sys.argv[2][2:12]+'.txt','a')
+
+        self.sync_flag = 0
 
         self.binfile_path = self.binfile_Path()
         self.download_panel =self.download_config()
@@ -67,24 +69,24 @@ class FlashUI(wx.Frame):
                 #self.COM_panel_1.xonxoff = 0
                 #self.COM_panel_1.port = "COM5"
                 self.COM_panel_1.port = sys.argv[1]#sys.argv[1]
-                print >> self.f_note, self.COM_panel_1.port
+                #print >> self.f_note, self.COM_panel_1.port
                 self.COM_panel_1.parity = 'None'[0]
                 self.COM_panel_1.baudrate = 576000
                 #print self.COM_panel_1.baudrate
                 self.COM_panel_1.bytesize = 8
                 self.COM_panel_1.stopbits = 1
                 self.COM_panel_1.open()
-                print >> self.f_note, "COM_panel_1 open succeed"
+                #print >> self.f_note, "COM_panel_1 open succeed"
                 return True
             except Exception:
                 self.COM_panel_1.close()
-                print >> self.f_note, sys.exc_info()[0], sys.exc_info()[1]
-                print >> self.f_note, "COM Open Error!"
+                #print >> self.f_note, sys.exc_info()[0], sys.exc_info()[1]
+                #print >> self.f_note, "COM Open Error!"
                 return False
         else:
             isOpened_panel_1.clear()
             self.COM_panel_1.close()
-            print >> self.f_note, "COM_panel_1 close"
+            #print >> self.f_note, "COM_panel_1 close"
             return False
             # cnv3.itemconfig("led",fill="black")
 
@@ -148,13 +150,15 @@ class FlashUI(wx.Frame):
             pkt = struct.pack('<BBHI', 0x00, op, len(data), chk) + data
             self.write(pkt)
 
-        if self.COM_panel_1.read(1) != '\xc0':
+        if  self.COM_panel_1.read(1) != '\xc0':
+            self.sync_flag = 2
             #raise Exception('Invalid head of packet')
             print 'waiting sync.........'
             raise Exception('waiting sync.........')
         hdr = self.read(8)
         (resp,op_ret,len_ret,val) = struct.unpack('<BBHI', hdr)
         if resp != 0x01 or (op and op_ret != op):
+            self.sync_flag = 3
             raise Exception('Invalid response')
         body = self.read(len_ret)
 
@@ -169,9 +173,9 @@ class FlashUI(wx.Frame):
             self.command()
 
     def connect(self):
-        print >> self.f_note, "device_sync Connecting..."
+        #print >> self.f_note, "device_sync Connecting..."
         self.COM_panel_1.timeout = 0.2
-        for i in xrange(50):
+        for i in xrange(7):
             try:
                 self.COM_panel_1.flushInput()
                 self.COM_panel_1.flushOutput()
@@ -180,18 +184,18 @@ class FlashUI(wx.Frame):
                 return 0
             except:
                 time.sleep(0.05)
-                print >> self.f_note, "come in"
-                print >> self.f_note, sys.exc_info()[0], sys.exc_info()[1]
-        raise Exception('Failed to connect')
+
+        return false
 
     def device_sync(self):
         try:
             self.connect()
-            print >> self.f_note, "chip sync ok!"
+            #print >> self.f_note, "chip sync ok!"
             return True
         except:
-            print >> self.f_note, "chip sync error."
+            #print >> self.f_note, "chip sync error."
             return False
+
 
     def flash_begin(self,_size,offset):
         old_tmo = self.COM_panel_1.timeout
@@ -214,12 +218,12 @@ class FlashUI(wx.Frame):
 
         if (total_sector_num - 2 * head_sector_num) > 0:
             size = (total_sector_num - head_sector_num) * 4096
-            print >> self.f_note, "head: ", head_sector_num, ";total:", total_sector_num
-            print >> self.f_note, "erase size : ", size
+            #print >> self.f_note, "head: ", head_sector_num, ";total:", total_sector_num
+            #print >> self.f_note, "erase size : ", size
         else:
             size = int(math.ceil(total_sector_num / 2.0) * 4096)
-            print >> self.f_note, "head:", head_sector_num, ";total:", total_sector_num
-            print >> self.f_note, "erase size :", size
+            #print >> self.f_note, "head:", head_sector_num, ";total:", total_sector_num
+            #print >> self.f_note, "erase size :", size
         if self.command(0x02,struct.pack('<IIII', size, 0x200, 0x400, offset))[1] != "\0\0":
             raise Exception('Failed to enter Flash download mode')
         self.COM_panel_1.timeout = old_tmo
@@ -246,13 +250,13 @@ class FlashUI(wx.Frame):
         key = data[13:49]
         H_6 = (data[50:52]+data[53:55]+data[56:58]+data[59:61]+data[62:64]+data[65:67]).decode('hex')
         L_6 = (data[68:70]+data[71:73]+data[74:76]+data[77:79]+data[80:82]+data[83:85]).decode('hex')
-        print >> self.f_note, data
-        print >> self.f_note, len(data)
-        print >> self.f_note, ita
-        print >> self.f_note, id
-        print >> self.f_note, key
-        print >> self.f_note, H_6
-        print >> self.f_note, L_6
+        #print >> self.f_note, data
+        #print >> self.f_note, len(data)
+        #print >> self.f_note, ita
+        #print >> self.f_note, id
+        #print >> self.f_note, key
+       # print >> self.f_note, H_6
+        #print >> self.f_note, L_6
 
         image = ['8DB0839D'+24*'\x00'+'\
 094FAFE8'+63*'\x00'+\
@@ -271,8 +275,8 @@ id+16*'\x00'+'\
 \xD0\xEA\x17'+64*'\x00'+\
 3723*'\xFF']
 
-        print >> self.f_note, "data_len:"
-        print >> self.f_note, len(image[0])
+        #print >> self.f_note, "data_len:"
+        #print >> self.f_note, len(image[0])
         #file = open('test.bin','a+')
         #file.truncate()
         #file.write(image[0])
@@ -283,12 +287,14 @@ id+16*'\x00'+'\
     def get_sign_sector_data(self):
         image = ['\x00'+4094*'\xFF']
 
-        print >> self.f_note, "data_len:"
-        print >> self.f_note, len(image[0])
+        #print >> self.f_note, "data_len:"
+        #print >> self.f_note, len(image[0])
         return image[0]
 
     def flash_download(self,filename='',address=0,reboot=False):
         image = []
+        #prosent = 0
+        old_prosent = 1
         if filename == '':
             return True
         elif filename.find("csv") != -1:
@@ -308,16 +314,16 @@ id+16*'\x00'+'\
             image = file.read()
             file.close()
             #print "write address:0x%08x... (%d %%)" % (address)
-            print >> self.f_note,"data_len:"
-            print >> self.f_note, len(image)
+            #print >> self.f_note,"data_len:"
+            #print >> self.f_note, len(image)
         #print image
         #print image
-            print >> self.f_note, 'Erasing flash...'
+            #print >> self.f_note, 'Erasing flash...'
         try:
             self.flash_begin(len(image),address)
-            print >> self.f_note, "erase flash succeed"
+            #print >> self.f_note, "erase flash succeed"
         except:
-            print >> self.f_note, "erase flash error"
+            #print >> self.f_note, "erase flash error"
             return False
 
         seq = 0
@@ -329,11 +335,18 @@ id+16*'\x00'+'\
                     print_flg = True
                     # print >>self.f_note, "come to Write at ..."
                     #print >>self.f_note, '\rcome to Writing at 0x%08x... (%d %%)' % (address + seq * 0x400, 100 * self.process_num / self.total_len),  # 100*seq/blocks),
-                    print >>self.f_note, '\rcome to Writing at 0x%08x... (%d %%)' % (address + seq * 0x400, 100 * self.process_num / self.total_len)  # 100*seq/blocks),
-                    print '\rcome to Writing at 0x%08x... (%d %%)' % (address + seq * 0x400, 100 * self.process_num / self.total_len)
-                    prosent = (seq * 0x400, 100 * self.process_num / self.total_len)
+                    #print >>self.f_note, '\rcome to Writing at 0x%08x... (%d %%)' % (address + seq * 0x400, 100 * self.process_num / self.total_len)  # 100*seq/blocks),
+                    #
+                    #if (prosent%10):
+                        #old_prosent = prosent
+                    prosent = 100 * self.process_num / self.total_len
+                    #print prosent
+                    if (int(prosent)%10) == 0 and (int(old_prosent)!=int(prosent)):
+                        old_prosent = prosent
+                        print '\rcome to Writing at 0x%08x... (%d %%)' % (address + seq * 0x400, 100 * self.process_num / self.total_len)
+
                     #print >>self.f_note, int()
-                    self.Download_Panel_1_gauge.SetValue(prosent[1])
+                    #self.Download_Panel_1_gauge.SetValue(prosent[1])
                     self.process_num += 1
                     sys.stdout.flush()
                     # print >>self.f_note, "test img_len: ",len(image), " seq: ",seq
@@ -343,82 +356,87 @@ id+16*'\x00'+'\
                 self.flash_block(block, seq)
                 image = image[0x400:]
                 seq += 1
-                print >>self.f_note, '\nLeaving...'
+                #print >>self.f_note, '\nLeaving...'
             return True
         except:
-            print >>self.f_note,"error when download firmware"
-            print >>self.f_note, sys.exc_info()[0], sys.exc_info()[1]
+            #print >>self.f_note,"error when download firmware"
+            #print >>self.f_note, sys.exc_info()[0], sys.exc_info()[1]
             return False
 
     def start_download_panel_1(self,event):
-        ret = True
+        try:
+            ret = True
 
-        '''self.dl_list[0] = [self.bin_path_1.GetValue(),0x7e000]
-        self.dl_list[1] = [self.bin_path_2.GetValue(),0x00000]
-        self.dl_list[2] = [self.bin_path_3.GetValue(),0xfc000]
-        self.dl_list[3] = [self.bin_path_4.GetValue(),0x01000]
-        self.dl_list[4] = [self.data_path_1.GetValue(),0x78000]
-        self.dl_list[5] = ["Sign a sector",0x7A000]
+            '''self.dl_list[0] = [self.bin_path_1.GetValue(),0x7e000]
+            self.dl_list[1] = [self.bin_path_2.GetValue(),0x00000]
+            self.dl_list[2] = [self.bin_path_3.GetValue(),0xfc000]
+            self.dl_list[3] = [self.bin_path_4.GetValue(),0x01000]
+            self.dl_list[4] = [self.data_path_1.GetValue(),0x78000]
+            self.dl_list[5] = ["Sign a sector",0x7A000]
 
 
-        self.dl_list[0] = [self.bin_path_1.GetValue(), int(self.bin_path_1_addr.GetValue(),16)]
-        self.dl_list[1] = [self.bin_path_2.GetValue(), int(self.bin_path_2_addr.GetValue(),16)]
-        self.dl_list[2] = [self.bin_path_3.GetValue(), int(self.bin_path_3_addr.GetValue(),16)]
-        self.dl_list[3] = [self.bin_path_4.GetValue(), int(self.bin_path_4_addr.GetValue(),16)]
-        self.dl_list[4] = [self.data_path_1.GetValue(), int(self.data_path_1_addr.GetValue(),16)]
-        self.dl_list[5] = ['Sign a sector', 0x7A000]
-        '''
-        print >>self.f_note,self.dl_list
+            self.dl_list[0] = [self.bin_path_1.GetValue(), int(self.bin_path_1_addr.GetValue(),16)]
+            self.dl_list[1] = [self.bin_path_2.GetValue(), int(self.bin_path_2_addr.GetValue(),16)]
+            self.dl_list[2] = [self.bin_path_3.GetValue(), int(self.bin_path_3_addr.GetValue(),16)]
+            self.dl_list[3] = [self.bin_path_4.GetValue(), int(self.bin_path_4_addr.GetValue(),16)]
+            self.dl_list[4] = [self.data_path_1.GetValue(), int(self.data_path_1_addr.GetValue(),16)]
+            self.dl_list[5] = ['Sign a sector', 0x7A000]
+            '''
+            #print >>self.f_note,self.dl_list
 
-        ret = self.COMOpen(self)
-        #ret = self.COMOpen(self,self.COM_panel_1,"COM12",576000)
-        if ret:
-            ret = self.device_sync()
-
-        if ret:
-            image_list = []
-            for idx in range(len(self.dl_list)):
-                filename,offset = self.dl_list[idx]
-                print >>self.f_note, 'filename:%s',filename
-                print >>self.f_note, 'offset : %s',offset
-                if filename.find('csv')!=-1:
-                    #image = file(filename, 'rb').read()
-                    #file = open(filename, 'rb')
-                    #image = file.read()
-                    #file.close()
-                    blocks = math.floor(4095/0x400 +1 )
-                    self.total_len += blocks
-                elif filename.find('Sign')!=-1:
-                    blocks = math.floor(4095 /0x400 + 1)
-                    self.total_len += blocks
-                elif filename != '':
-                    #image = file(filename, 'rb').read()
-                    file = open(filename, 'rb')
-                    image = file.read()
-                    file.close()
-                    blocks = math.floor(len(image) / 0x400 + 1)
-                    self.total_len += blocks
-                #print >>self.f_note, "total len !!!=============",self.total_len
-                    image_list.append(image)
-
-            for filename,offset in self.dl_list:
-                print >>self.f_note, "dl_list:"
-                print >>self.f_note, self.dl_list
-                ret = self.flash_download(filename, offset,False)
-                if not ret:
-                    break
+            ret = self.COMOpen(self)
+            #ret = self.COMOpen(self,self.COM_panel_1,"COM12",576000)
             if ret:
-                #print >>self.f_note, "come to Writing at 0x000fc000... (100 %) "
-                self.Download_Panel_1_gauge.SetValue(100)
-                self.COM_panel_1.close()
-                print >>self.f_note, 'Writeing all over 100%'
-                print 'Writeing all over 100%'
-                print >>self.f_note, "COM_panel_1 close"
-                self.total_len = 0
-                self.process_num = 1
-                return True
-            else:
-                return False
+                ret = self.device_sync()
+
+            if ret:
+                self.sync_flag = 0
+                image_list = []
+                for idx in range(len(self.dl_list)):
+                    filename,offset = self.dl_list[idx]
+                    #print >>self.f_note, 'filename:%s',filename
+                    #print >>self.f_note, 'offset : %s',offset
+                    if filename.find('csv')!=-1:
+                        #image = file(filename, 'rb').read()
+                        #file = open(filename, 'rb')
+                        #image = file.read()
+                        #file.close()
+                        blocks = math.floor(4095/0x400 +1 )
+                        self.total_len += blocks
+                    elif filename.find('Sign')!=-1:
+                        blocks = math.floor(4095 /0x400 + 1)
+                        self.total_len += blocks
+                    elif filename != '':
+                        #image = file(filename, 'rb').read()
+                        file = open(filename, 'rb')
+                        image = file.read()
+                        file.close()
+                        blocks = math.floor(len(image) / 0x400 + 1)
+                        self.total_len += blocks
+                    #print >>self.f_note, "total len !!!=============",self.total_len
+                        image_list.append(image)
+
+                for filename,offset in self.dl_list:
+                    #print >>self.f_note, "dl_list:"
+                    #print >>self.f_note, self.dl_list
+                    ret = self.flash_download(filename, offset,False)
+                    if not ret:
+                        break
+                if ret:
+                    #print >>self.f_note, "come to Writing at 0x000fc000... (100 %) "
+                    self.Download_Panel_1_gauge.SetValue(100)
+                    self.COM_panel_1.close()
+                    #print >>self.f_note, 'Writeing all over 100%'
+                    print 'Writeing all over 100%'
+                    #print >>self.f_note, "COM_panel_1 close"
+                    self.total_len = 0
+                    self.process_num = 1
+                    return True
+                else:
+                    return False
+        except:
+            return False
+
 
     def Load_bin_path_1(self,event):
         file_path = ''
@@ -499,17 +517,40 @@ id+16*'\x00'+'\
                 dialog.Destroy()
 
     def start_download_pannel_1_threading(self,event):
-        ret = self.start_download_panel_1(self)
-        if ret == True:
-            print "download flash success"
-            print >> self.f_note,"download flash success"
-            self.f_note.close()
-            sys.exit(0)
-        else:
-            print "download flash failed"
-            print >> self.f_note,"download flash success"
-            self.f_note.close()
-            sys.exit(1)
+            ret = self.start_download_panel_1(self)
+            if self.sync_flag == 3:
+                print "sync device return data error"
+                print "download flash failed"
+                print "exit 3"
+                #print >> self.f_note,"sync device return data error"
+                #print >> self.f_note,"download flash failed"
+                #print >> self.f_note,"exit 3"
+                #self.f_note.close()
+                sys.exit(3)
+            elif self.sync_flag == 2:
+                print "sync device no return data"
+                print "download flash failed"
+                print "exit 2"
+               # print >> self.f_note,"sync device no return data"
+               # print >> self.f_note,"download flash failed"
+                #print >> self.f_note,"exit 2"
+              #  self.f_note.close()
+                sys.exit(2)
+
+            if ret == 1:
+                print "download flash success"
+                print "exit 0"
+                #print >> self.f_note,"download flash success"
+               # print >> self.f_note,"exit 0"
+                #self.f_note.close()
+                sys.exit(0)
+            else:
+                print "download flash failed"
+                print "exit 1"
+               # print >> self.f_note,"download flash failed"
+                #print >> self.f_note,"exit 1"
+                #self.f_note.close()
+                sys.exit(1)
 
     def download_config(self):
         font = wx.Font(13,wx.SWISS, wx.NORMAL, wx.BOLD)
