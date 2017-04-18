@@ -54,9 +54,12 @@ class FlashUI(wx.Frame):
         self.process_num = 1
         self.load_data_flag = 0
 
-        #self.f_note = open('D:\\itead_8285_download\\log\\'+datetime.now().strftime('%Y_%m_%d_%H%M%S_')+sys.argv[2][2:12]+'.txt','a')
+        self.f_note = open('D:\\itead_8285_download\\log\\'+datetime.now().strftime('%Y_%m_%d_%H%M%S_')+sys.argv[2][2:12]+'.txt','a')
 
         self.sync_flag = 0
+
+        self.sync_data = ''
+        self.sync_ret = ''
 
         self.binfile_path = self.binfile_Path()
         self.download_panel =self.download_config()
@@ -146,23 +149,33 @@ class FlashUI(wx.Frame):
         return b
 
     def command(self,op=None,data=None,chk=0):
+        self.sync_data = '0'
+        self.sync_ret = ''
         if op:
             pkt = struct.pack('<BBHI', 0x00, op, len(data), chk) + data
             self.write(pkt)
 
-        if  self.COM_panel_1.read(1) != '\xc0':
+        self.sync_data = self.COM_panel_1.read(1)
+
+        if  self.sync_data != '\xc0' and self.sync_data == '':
             self.sync_flag = 2
             #raise Exception('Invalid head of packet')
             print 'waiting sync.........'
             raise Exception('waiting sync.........')
+
         hdr = self.read(8)
+        self.sync_data += hdr
         (resp,op_ret,len_ret,val) = struct.unpack('<BBHI', hdr)
         if resp != 0x01 or (op and op_ret != op):
             self.sync_flag = 3
-            raise Exception('Invalid response')
-        body = self.read(len_ret)
+            #raise Exception('Invalid response')
 
-        if self.COM_panel_1.read(1) != chr(0xc0):
+        body = self.read(len_ret)
+        self.sync_data += body
+
+        self.sync_ret = self.COM_panel_1.read(1)
+        self.sync_data += self.sync_ret
+        if self.sync_ret != chr(0xc0):
             raise Exception('Invalid end of packet')
 
         return val, body
@@ -184,8 +197,7 @@ class FlashUI(wx.Frame):
                 return 0
             except:
                 time.sleep(0.05)
-
-        return false
+        raise Exception('')
 
     def device_sync(self):
         try:
@@ -387,7 +399,15 @@ id+16*'\x00'+'\
             ret = self.COMOpen(self)
             #ret = self.COMOpen(self,self.COM_panel_1,"COM12",576000)
             if ret:
+                print "uart OK"
+                print >> self.f_note, "uart OK"
                 ret = self.device_sync()
+            else:
+                print "uart NOK"
+                print >> self.f_note, "uart NOK"
+
+            print >> self.f_note, "SYNC True:c001080200070712200000c0"
+            print >> self.f_note,"SYNC Rece:"+binascii.b2a_hex(self.sync_data)
 
             if ret:
                 self.sync_flag = 0
@@ -522,34 +542,34 @@ id+16*'\x00'+'\
                 print "sync device return data error"
                 print "download flash failed"
                 print "exit 3"
-                #print >> self.f_note,"sync device return data error"
+                print >> self.f_note,"sync device return data error"
                 #print >> self.f_note,"download flash failed"
-                #print >> self.f_note,"exit 3"
-                #self.f_note.close()
+                print >> self.f_note,"exit 3"
+                self.f_note.close()
                 sys.exit(3)
             elif self.sync_flag == 2:
                 print "sync device no return data"
                 print "download flash failed"
                 print "exit 2"
-               # print >> self.f_note,"sync device no return data"
+                print >> self.f_note,"sync device no return data"
                # print >> self.f_note,"download flash failed"
-                #print >> self.f_note,"exit 2"
-              #  self.f_note.close()
+                print >> self.f_note,"exit 2"
+                self.f_note.close()
                 sys.exit(2)
 
             if ret == 1:
                 print "download flash success"
                 print "exit 0"
-                #print >> self.f_note,"download flash success"
-               # print >> self.f_note,"exit 0"
-                #self.f_note.close()
+                print >> self.f_note,"download flash success"
+                print >> self.f_note,"exit 0"
+                self.f_note.close()
                 sys.exit(0)
             else:
                 print "download flash failed"
                 print "exit 1"
-               # print >> self.f_note,"download flash failed"
-                #print >> self.f_note,"exit 1"
-                #self.f_note.close()
+                print >> self.f_note,"download flash failed"
+                print >> self.f_note,"exit 1"
+                self.f_note.close()
                 sys.exit(1)
 
     def download_config(self):
